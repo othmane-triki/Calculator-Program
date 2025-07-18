@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Cairo";
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+#calculator {
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+@media (max-width:768px) {
+    #calculator {
+        width: calc(100% - 40px);
+        max-width: 100%;
+    }
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+#display:focus {
+    outline: none;
+}
+@media (max-width: 768px) {
+    #display {
+        font-size: 3rem;
+    }
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+    
+}
+
+@media (max-width: 768px) {
+    #keys {
+        padding: 15px;
+        gap: 10px;
+    }
+}
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 31%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+@media (max-width: 768px) {
+    button {
+        width: 70px;
+        height: 70px;
+    }
+}
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.operator-btn {
+    background-color: hsl(34, 100%, 40%);
+}
+.operator-btn:hover {
+    background-color: hsl(34, 100%, 50%);
+}
+.operator-btn:active {
+    background-color: hsl(34, 100%, 60%);
+}
